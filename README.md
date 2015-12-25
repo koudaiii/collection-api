@@ -12,7 +12,7 @@ For Hack a thon
 git clone [this repository]
 cd collection-api
 bundle install
-rails s -p
+bundle exec foreman run web
 ```
 
 ## API
