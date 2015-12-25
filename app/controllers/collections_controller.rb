@@ -1,4 +1,12 @@
 class CollectionsController < ApplicationController
+  def index
+    stamp_ids = Collection.where(user_id: params[:user_id]).pluck(:stamp_id)
+    render json: {
+      data: {
+        stamp_id: stamp_ids,
+      }
+    }
+  end
   def create
     collection = Collection.where(user_id: params[:user_id], stamp_id: params[:stamp_id]).first
     if collection
