@@ -1,0 +1,17 @@
+development:
+  apikey: <%= ENV["TREASURE_DATA_API_KEY"] %>
+  database: wtd_devel
+  debug_mode: true  # enable debug mode
+
+qa:
+  apikey: <%= ENV["TREASURE_DATA_API_KEY"] %>
+  database: wtd_qa
+  debug_mode: true  # enable debug mode
+
+production:
+  apikey: <%= ENV["TREASURE_DATA_API_KEY"] %>
+  database: wtd_prod
+  debug_mode: false
+
+# disable logging
+test:

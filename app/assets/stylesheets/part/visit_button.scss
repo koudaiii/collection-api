@@ -1,0 +1,164 @@
+@import "application";
+
+html {
+  background-color: transparent;
+}
+.visit-button-modal-wrapper {
+  .ui-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    opacity: 0.9;
+    span {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: $gray1;
+      font-size: 24px;
+      cursor: pointer;
+      &:hover {
+        color: $gray2;
+      }
+    }
+  }
+  .ui-modal-contents-inner {
+    $width: 600px;
+    $height: 330px;
+    $screen-medium: "only screen and (max-width : #{$width * 10 / 9})";
+    $screen-small: "only screen and (max-width: 449px)";
+    width: $width;
+    margin-left: -$width / 2;
+    height: $height;
+    margin-top: -$height / 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    @media #{$screen-medium} {
+      $med-height: 400px;
+      margin-left: 0;
+      left: 5%;
+      width: 90%;
+      min-width: 290px;
+      height: $med-height;
+      margin-top: -$med-height / 2;
+
+      .content-part {
+        .cover-img {
+          float: left;
+          width: 120px;
+          height: 120px;
+          margin: 20px;
+        }
+
+        .cover-desc {
+          margin: 20px;
+        }
+        @media #{$screen-small} {
+          .cover-img {
+            display: none;
+          }
+          .cover-desc {
+            margin: 0px;
+            margin-top: 10px;
+          }
+        }
+      }
+      .apply-navigation {
+        width: 100%;
+        margin: 20px 0;
+        li {
+          display: block;
+          padding: 0 20px;
+          .wt-ui-button {
+            width: 100%;
+            padding: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .ui-modal-contents-title {
+      font-size: 14px;
+      line-height: 1.6;
+      border-bottom: 1px solid $lightgray1;
+      padding: 15px 20px;
+      color: $gray4;
+    }
+    .ui-modal-contents {
+      h1 {
+        font-size: 15pt;
+        font-weight: bold;
+        color: $gray3;
+      }
+      .desc {
+        color: $gray2;
+        &.main {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        &.sub {
+          text-align: right;
+          margin-top: 60px;
+          font-weight: normal;
+          font-size: 23px;
+        }
+      }
+      padding: 20px;
+    }
+  }
+
+  .select-comment {
+    margin-top: 15px;
+    label {
+      display: block;
+      font-size: 18px;
+      line-height: 2;
+    }
+  }
+
+  .content-part {
+    @include clearfix;
+    .cover-img {
+      float: left;
+      width: 140px;
+      height: 140px;
+      margin: 0 30px;
+    }
+
+    .cover-desc {
+      margin: 25px;
+      margin-left: 200px;
+    }
+  }
+
+  .apply-navigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    text-align: right;
+    letter-spacing: 10px;
+    li {
+      display: inline-block;
+      .wt-ui-button {
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        padding: 0 50px;
+      }
+    }
+  }
+}

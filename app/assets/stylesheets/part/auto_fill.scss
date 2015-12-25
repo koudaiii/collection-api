@@ -1,0 +1,80 @@
+@import "application";
+
+.user-confirm-window-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: white;
+
+  .service-logo {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .ask-main {
+    margin-top: 56px;
+    font-size: 17px;
+    font-weight: bold;
+    color: $gray3;
+  }
+  .ask-detail {
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid $layout-light-border;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    .info-title{
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid $layout-light-border;
+      padding-bottom: 5px;
+      color: $gray3;
+      font-weight: bold;
+    }
+  }
+  .info-list {
+    text-align: left;
+    font-size: 16px;
+    color: $gray3;
+    margin-top: 20px;
+    margin-left: 38px;
+    ul{
+      li{
+      }
+    }
+  }
+  .etc {
+    color: $gray1;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .buttons{
+    margin-top: 23px;
+    font-size: 14px;
+    .cancel-button {
+      height: 42px;
+      line-height: 42px;
+      width: 110px;
+      padding: 0 10px;
+    }
+    .confirm-button {
+      @extend .cancel-button;
+      width: 151px;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+  }
+  .policy {
+    width: 270px;
+    color: $gray1;
+    margin: auto;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}

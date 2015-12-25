@@ -1,0 +1,16 @@
+service:
+  wantedly:
+    url: https://www.wantedly.com
+    domain: www.wantedly.com
+    port: ""
+  sync:
+    url: https://m.wantedly.com
+    domain: m.wantedly.com
+    port: ""
+  account:
+    url: https://accounts.wantedly.com
+    domain: accounts.wantedly.com
+    port: ""
+  collection:
+    url: https://immense-harbor-2167.herokuapp.com
+    domain: immense-harbor-2167.herokuapp.com

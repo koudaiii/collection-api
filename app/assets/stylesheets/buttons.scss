@@ -1,0 +1,25 @@
+.wt-ui-button {
+  @include wt-ui-button;
+}
+
+.wt-ui-button-block {
+  @include wt-ui-button;
+  @include wt-ui-button-block;
+}
+
+.wt-ui-button-blue {
+  @include wt-ui-button-blue;
+}
+
+.wt-ui-button-blue-block {
+  @include wt-ui-button-blue;
+  @include wt-ui-button-block;
+}
+
+.omniauth-facebook-button {
+  @include omniauth-button;
+  background: $facebook-color;
+  &:hover {
+    background: darken($facebook-color, 10%);
+  }
+}

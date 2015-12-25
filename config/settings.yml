@@ -1,0 +1,17 @@
+service:
+  wantedly:
+    url: https://www.wantedly.com
+    domain: www.wantedly.com
+    port: ""
+  sync:
+    url: https://m.wantedly.com
+    domain: m.wantedly.com
+    port: ""
+  account:
+    url: https://accounts.wantedly.com
+    domain: accounts.wantedly.com
+    port: ""
+  collection:
+    url: http://localhost:3000
+    domain: localhost
+    port: 3000

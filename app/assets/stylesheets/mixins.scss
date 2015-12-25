@@ -1,0 +1,62 @@
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+@mixin wt-ui-button {
+  background: $lightergray1;
+  color: $gray3;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 3px;
+  padding: 0 30px;
+  font-weight: bold;
+  @include appearance(none);
+  &:hover {
+    background: darken($lightergray1, 10%);
+    text-decoration: none;
+  }
+  &:disabled {
+    background: $lightgray1;
+    color: $gray1;
+    border-color: $button-new-lightgray-border;
+    &:hover{
+      background: $lightgray1;
+      cursor: default;
+    }
+  }
+}
+
+@mixin wt-ui-button-blue {
+  @include wt-ui-button;
+  background: $blue1;
+  color: #fff;
+  font-weight: normal;
+  &:hover {
+    background: darken($blue1, 10%);
+  }
+}
+
+@mixin wt-ui-button-block {
+  display: block;
+  &[type="submit"] {
+    width: 100%;
+  }
+}
+
+@mixin omniauth-button {
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  &:hover {
+    text-decoration: none;
+  }
+}
