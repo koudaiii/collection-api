@@ -38,7 +38,6 @@ gem 'pry-nav'
 gem 'annotate'
 gem 'hashie'
 gem 'activeresource', require: 'active_resource'
-gem 'devise'
 gem 'config'
 gem 'wannabe_bool'
 
