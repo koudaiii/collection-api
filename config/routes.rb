@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :collections
+  resources :collections, only: [:create]
   root to: 'welcom#index'
 end
