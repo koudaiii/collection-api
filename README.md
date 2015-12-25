@@ -1,7 +1,5 @@
 # Collection API
 
--UserIDとスタンプIDを保存して、返すだけ
-
 https://immense-harbor-2167.herokuapp.com/
 
 For Hack a thon
@@ -17,6 +15,17 @@ bundle exec foreman run web
 
 ## API
 
-### GET
+### GET(/users/:id(.:format)users#show)
 
-### POST
+{
+ user_id: "user_id"
+ stamp_id: ["ojigi_2", "ojigi_3"]
+}
+
+※ stamp_id で uniqにされたものを返すようにする
+
+### POST(/users(.:format)users#create)
+{
+  user_id : "user_id"
+  stamp_id: "stamp_id"
+}
