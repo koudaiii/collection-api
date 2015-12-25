@@ -1,6 +1,6 @@
 class CollectionsController < ApplicationController
   def create
-    collection = Collection.where(user_id: collection_params[:user_id], stamp_id: collection_params[:stamp_id]).first
+    collection = Collection.where(user_id: params[:user_id], stamp_id: params[:stamp_id]).first
     if collection
       render json: {
         data: {
@@ -10,7 +10,7 @@ class CollectionsController < ApplicationController
         }
       }, status: :success
     else
-      new_collection = Collection.new(user_id: collection_params[:user_id], stamp_id: collection_params[:stamp_id])
+      new_collection = Collection.new(user_id: params[:user_id], stamp_id: params[:stamp_id])
       if new_collection.save
         render json: {
           data: {
@@ -29,10 +29,5 @@ class CollectionsController < ApplicationController
         }, status: :unprocessable_entity
       end
     end
-  end
-
-  private
-  def collection_params
-    params.require(:collection).permit(:user_id, :stamp_id)
   end
 end
