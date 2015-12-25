@@ -7,6 +7,7 @@ class CollectionsController < ApplicationController
       }
     }
   end
+
   def create
     collection = Collection.where(user_id: params[:user_id], stamp_id: params[:stamp_id]).first
     if collection
