@@ -15,18 +15,27 @@ bundle exec foreman run web
 
 ## API
 
-### GET(/users/:id(.:format)users#show)
+### GET(/collections/)
+
+* req
 
 ```:json
 {
- user_id: "user_id"
+  user_id: "id"
+}
+```
+
+* res
+
+```:json
+{
  stamp_id: ["ojigi_2", "ojigi_3"]
 }
 ```
 
 * stamp_id で uniqにされたものを返すようにする
 
-### POST(/users(.:format)users#create)
+### POST(/collections)
 
 ```
 {
