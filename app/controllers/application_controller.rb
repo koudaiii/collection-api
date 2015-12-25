@@ -57,4 +57,5 @@ class ApplicationController < ActionController::Base
   def background_fetch?
     request.headers['HTTP_X_BACKGROUND_FETCH'].to_b
   end
+  layout 'flatly'
 end
