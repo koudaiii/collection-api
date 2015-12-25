@@ -1,3 +1,0 @@
-// User
-// Bootswatch
-// bootswatch.js
