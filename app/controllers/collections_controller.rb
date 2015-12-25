@@ -3,7 +3,7 @@ class CollectionsController < ApplicationController
     stamp_ids = Collection.where(user_id: params[:user_id]).pluck(:stamp_id)
     render json: {
       data: {
-        stamp_id: stamp_ids,
+        stamp_id: stamp_ids.sort,
       }
     }
   end
