@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 gem 'puma'
 gem 'foreman'
 gem 'rack-health'
@@ -42,6 +42,10 @@ gem 'config'
 gem 'wannabe_bool'
 
 gem 'jpmobile'
+
+gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'twitter-bootswatch-rails-fontawesome'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
