@@ -16,7 +16,7 @@ class CollectionsController < ApplicationController
           stamp_id: collection.stamp_id,
           user_id:  collection.user_id,
         }
-      }, status: :success
+      }
     else
       new_collection = Collection.new(user_id: params[:user_id], stamp_id: params[:stamp_id])
       if new_collection.save
@@ -26,7 +26,7 @@ class CollectionsController < ApplicationController
             stamp_id: new_collection.stamp_id,
             user_id:  new_collection.user_id,
           }
-        }, status: :success
+        }
       else
         render json: {
           data: {
